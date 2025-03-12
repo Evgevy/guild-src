@@ -8,6 +8,7 @@ import { initPhoneValidation } from './modules/init-phone-validation';
 import { initInfoSlider } from './modules/init-info-slider';
 import { initCheck } from './modules/init-check';
 import { initAboutSlider } from './modules/init-about-slider';
+import { initCube } from './modules/init-cube';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -22,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneValidation();
     initInfoSlider();
     initAboutSlider();
+    initCube();
   });
 });
 

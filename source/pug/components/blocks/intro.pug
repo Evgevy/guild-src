@@ -5,11 +5,11 @@ mixin intro()
         .container 
             .intro__wrapper 
                 p.intro__text Гильдия разрабатывает не просто веб-сайт, а полноценное онлайн-событие.
-                .intro__images 
-                    .intro__image 
-                        img(src="img/content/intro1.webp")
-                    .intro__image 
-                        img(src="img/content/intro2.webp")
-                    .intro__image 
-                        img(src="img/content/intro3.webp")
-
+                .intro__slider.swiper(data-slider="cube")
+                    .swiper-wrapper 
+                        .swiper-slide 
+                            img(src="img/content/intro1.webp")
+                        .swiper-slide 
+                            img(src="img/content/intro2.webp")
+                        .swiper-slide 
+                            img(src="img/content/intro3.webp")
