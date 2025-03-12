@@ -1,0 +1,111 @@
+.header {
+  position: relative;
+  width: 100%;
+  background-color: #121215;
+  overflow: hidden;
+
+  &__wrapper {
+    width: 100%;
+    padding: 165px 0 60px;
+
+    @include vp-1023 {
+      padding-bottom: 45px;
+    }
+
+    @media screen and (max-width: 500px) {
+      align-items: flex-start;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 730px;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__title {
+    font-family: ZenDots;
+    font-size: 200px;
+    line-height: 78%;
+    background: linear-gradient(90deg, #8FD63F, #7CDBB1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+    position: relative;
+    text-align: center;
+    margin: 0;
+    @include vp-1279 {
+      font-size: 150px;
+    }
+
+    @include vp-1023 {
+      font-size: 100px;
+    }
+
+    @include vp-767 {
+      font-size: 80px;
+    }
+
+    @media screen and (max-width: 500px) {
+      font-size: 60px;
+      text-align: left;
+    }
+
+    @include vp-389 {
+      font-size: 45px;
+    }
+    
+  }
+
+  &__text {
+    font-family: Raleway;
+    font-size: 48px;
+    line-height: 120%;
+    margin: -10px 0 0;
+    color: $color-default-white;
+    text-align: center;
+    max-width: 1180px;
+    width: 100%;
+    padding-top: 100px;
+    background: #161515;
+    z-index: 1;
+    position: relative;
+
+    @include vp-1279 {
+      font-size: 40px;
+      max-width: 100%;
+      padding-top: 70px;
+      background: transparent;
+      margin: 0;
+    }
+
+    @include vp-1023 {
+      font-size: 35px;
+    }
+
+    @include vp-767 {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: 500px) {
+      text-align: left;
+    }
+
+    @include vp-389 {
+      font-size: 28px;
+    }
+    
+  }
+}
+
+
+

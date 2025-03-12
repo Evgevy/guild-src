@@ -1,0 +1,246 @@
+.advent {
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include vp-1023 {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__bg-img {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        width: 2200px;
+        height: 1400px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include vp-1023 {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 60px 0;
+
+        @include vp-1023 {
+            padding: 45px 0;
+        }
+    }
+
+    &__title {
+        font-family: Raleway;
+        font-size: 48px;
+        line-height: 120%;
+        font-weight: 700;
+        color: $color-default-white;
+        margin: 0 0 180px;
+        text-align: center;
+
+        @include vp-1023 {
+            font-size: 40px;
+        }
+
+        @include vp-389 {
+            font-size: 30px;
+            
+        }
+
+    }
+
+    .advent__list {
+        max-width: 1200px;
+        width: 100%;
+        counter-reset: item; 
+        list-style: none; 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; 
+        gap: 20px;
+        padding-bottom: 100px;
+        @include vp-1023 {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px 20px;
+        }
+
+        @include vp-767 {
+            grid-template-columns: 1fr;
+            gap: 100px;
+        }
+    }
+    
+    .advent__item {
+        max-width: 500px;
+        counter-increment: item; 
+        position: relative;
+        justify-content: space-between;
+
+        @include vp-1023 {
+            max-width: 300px;
+        }
+
+        @include vp-767 {
+            max-width: 100%;
+        }
+    }
+
+    .advent__item:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+        @include vp-1023 {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+
+    .advent__item:nth-child(2n) {
+        p {
+            text-align: left;
+        }
+
+        grid-row: 2;
+        grid-column: 2;
+
+        @include vp-1023 {
+            grid-row: auto;
+            grid-column: auto;
+        }
+        
+    }
+
+    .advent__item:nth-child(3) {
+        grid-row: 1;
+        grid-column: 3;
+
+        @include vp-1023 {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+    
+    .advent__item::before {
+        position: absolute;
+        bottom: -50%;
+        left: 0;
+        content: counter(item); 
+        font-weight: 700; 
+        font-family: 'Raleway';
+        font-size: 500px;
+        line-height: 100%;
+        color: rgba(255, 255, 255, 20%);
+
+        @include vp-1023 {
+            font-size: 300px;
+        }
+
+        @include vp-767 {
+            font-size: 200px;
+        }
+    }
+
+    .advent__item:nth-child(1)::before {
+        left: -50px;
+
+        @include vp-1023 {
+            bottom: auto;
+            top: -80%;
+            left: 0%;
+        }
+
+        @include vp-767 {
+            top: auto;
+            bottom: 0;
+        }
+
+        @media screen and (max-width: 500px) {
+            bottom: 40%;
+        }
+    }
+
+    .advent__item:nth-child(2)::before {
+        bottom: -10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @include vp-1023 {
+            bottom: auto;
+            top: -80%;
+            left: 80%;
+        }
+
+        @include vp-767 {
+            top: auto;
+            bottom: 30%;
+        }
+
+
+
+        @media screen and (max-width: 500px) {
+            bottom: 50%;
+        }
+    }
+
+    .advent__item:nth-child(3)::before {
+        left: auto;
+        right: -50px;
+
+        @include vp-1023 {
+            bottom: 0;
+            top: -100%;
+            left: 0%;
+        }
+
+        @include vp-767 {
+            top: auto;
+            bottom: -80%;
+        }
+
+        @media screen and (max-width: 500px) {
+            bottom: -20%;
+        }
+    }
+
+    &__text {
+        width: 100%;
+        font-family: 'Raleway';
+        font-size: 32px;
+        line-height: 100%;
+        color: $color-default-white;
+        text-align: center;
+        margin: 0;
+
+        @include vp-1023 {
+            text-align: left;
+        }
+
+        @include vp-767 {
+            font-size: 28px;
+        }
+
+        @include vp-389 {
+            font-size: 24px;
+        }
+    }
+}

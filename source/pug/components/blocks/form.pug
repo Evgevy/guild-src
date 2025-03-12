@@ -1,0 +1,42 @@
+mixin form()
+    section.form 
+        .form__bg 
+            img(src="img/content/form.webp" alt="Фон блока формы")
+        .container
+            .form__wrapper(id="form")
+                h2.form__title Напишите нам
+                form(method="post")
+                    .form__box
+                        .form__input-content
+                            +custom-input({type: "text", name: "name", placeholder: "Имя",}).form__input
+                            +icon('user', 40, 40)
+                        .form__input-content
+                            +custom-input({
+                                type: "tel",
+                                name: "phone",
+                                placeholder: "Телефон"
+                            }).form__input
+                            +icon('phone', 50, 50)
+                        .form__input-content
+                            +custom-input({
+                                type: "email",
+                                name: "email-adress",
+                                placeholder: "Email"
+                            }).form__input
+                            +icon('email', 40, 40)
+                    .form__input-content.text
+                        +custom-textarea({
+                            name: "question",
+                            placeholder: "Сообщение"
+                        }).form__input-text
+                        +icon('write', 40, 40)
+                    .form__buttom
+                        +custom-checkbox({
+                            label: 'Согласен',
+                            name: 'personal_data',
+                            checked: true
+                        }).form__check
+                        button(type="submit").form__btn Отправить
+        .form__bg-bottom 
+            img(src="img/content/lemur.webp" alt="Успокойся")
+                    

@@ -1,0 +1,134 @@
+.popup--feedback {
+
+    /*&__content {
+        max-width: 520px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        z-index: 9999;
+        padding: 50px 20px;
+        background: rgb(255, 255, 255);
+    }*/
+
+    /*&__close {
+        display: flex;
+        justify-content: end;
+        cursor: pointer;
+
+        svg {
+            path {
+                stroke: rgb(210, 0, 0);
+            }
+        }
+    }*/
+
+    .popup__title {
+        color: rgb(0, 0, 0);
+        font-family: Oswald;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 150%;
+        margin: 0 0 10px 0;
+    }
+
+    .popup__text {
+        color: rgb(0, 0, 0);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        margin: 0;
+    }
+
+    .form__agreement {
+        color: rgb(0, 0, 0);
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        margin: 0;
+    }
+
+    .form__sub-link {
+        display: inline;
+        text-decoration: underline;
+        max-width: 490px;
+        width: 100%;
+    }
+
+    .custom-input input,
+    .custom-input__label,
+    .custom-textarea textarea,
+    .custom-textarea__label {
+        color: rgb(26, 26, 26);
+        background: transparent;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 150%;
+        display: inline-block;
+    }
+
+    .custom-input__label,
+    .custom-textarea__label {
+        margin-top: 20px;
+    }
+
+    .custom-input input,
+    .custom-textarea textarea {
+        background: rgb(243, 243, 243) !important;
+    }
+
+    .custom-input input {
+        height: 50px !important;
+    }
+
+    .custom-input input::placeholder {
+        color: rgb(209, 209, 209);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .custom-textarea textarea::placeholder {
+        color: rgb(209, 209, 209);
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+    }
+
+    .custom-textarea textarea {
+        height: 130px;
+    }
+
+    .custom-textarea label {
+        height: auto;
+    }
+
+    .form__btn {
+        border-radius: 2px;
+        background: rgb(0, 174, 0);
+        color: rgb(255, 255, 255);
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 140%;
+        margin-bottom: 20px;
+        transition: .3s;
+        margin-top: 25px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .form__btn:hover {
+        background: rgb(0, 194, 0);
+    }
+
+    @media screen and (max-width: 420px) {
+        .popup__title {
+            font-size: 28px;
+        }
+    }
+}

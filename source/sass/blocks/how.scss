@@ -1,0 +1,186 @@
+.how {
+    position: relative;
+    overflow: hidden;
+
+    &__bg {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 900px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include vp-1023 {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        padding: 60px 0;
+
+        @include vp-1023 {
+            padding: 45px 0;
+        }
+    }
+
+    &__title {
+        font-family: Raleway;
+        font-size: 48px;
+        line-height: 120%;
+        font-weight: 700;
+        color: $color-default-white;
+        margin: 0 0 100px;
+        text-align: center;
+
+        @include vp-1023 {
+            font-size: 40px;
+            margin-bottom: 70px;
+        }
+
+        @include vp-389 {
+            font-size: 30px;
+            margin-bottom: 50px;
+        }
+
+    }
+
+    &__slider {
+        margin-bottom: 100px;
+        @include vp-1023 {
+            max-width: 320px;
+            width: 100%;
+            height: 100%;
+            margin-bottom: 60px;
+        }
+
+        @include vp-389 {
+            max-width: 250px;
+        }
+    }
+
+    .swiper-wrapper {
+        justify-content: space-between;
+        align-items: center;
+        gap: 15px;
+
+        @include vp-1023 {
+            justify-content: start;
+            gap: 0px;
+            height: auto;
+        }
+    }
+
+    .swiper-slide {
+        margin-left: auto;
+        max-width: 330px;
+        width: 100%;
+
+        @include vp-1023 {
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+
+    &__text {
+        font-family: Raleway;
+        font-size: 32px;
+        line-height: 100%;
+        color: $color-default-white;
+        margin: 0;
+        @include vp-1023 {
+            line-height: 120%;
+        }
+
+        @include vp-389 {
+            font-size: 28px;
+        }
+    }
+
+    &__buttons {
+        display: none;
+
+        @include vp-1023 {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+        position: static;
+        &::after {
+        display: none;
+        }
+
+        width: 50px;
+        height: 50px;
+
+        svg {
+        stroke: $color-default-white;
+        transition: stroke $trans-default;
+        }
+    }
+
+    .swiper-button-next {
+        right: -25px;
+        z-index: 10;
+    }
+
+    .swiper-button-prev {
+        left: -25px;
+        z-index: 10;
+    }
+
+    &__link {
+        position: relative;
+        font-family: Raleway;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 100%;
+        color: $color-default-white; 
+        -webkit-text-stroke: 0.7px #1C1B20;
+        text-stroke: 0.7px #1C1B20;
+        display: block;
+        z-index: 2;
+        background: linear-gradient(to left, #32431F 0%, #365C4E 100%);
+        padding: 25px 0;
+        max-width: 515px;
+        width: 100%;
+        border-radius: 100px;
+        text-align: center;
+        margin: 0 auto;
+        overflow: hidden;
+        z-index: 2;
+    
+        @media screen and (max-width: 500px) {
+            font-size: 30px;
+            padding: 15px 0;
+        }
+    
+        &::before {
+            display: block;
+            position: absolute;
+            content: "";
+            inset: 0;
+            background:  linear-gradient(to right, #32431F 0%, #365C4E 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity .2s linear;
+        }
+
+        &:hover::before {
+            opacity: 1;
+        }
+    }
+}

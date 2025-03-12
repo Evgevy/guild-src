@@ -1,0 +1,21 @@
+mixin how()
+    section.how
+        .how__bg 
+            img(src="img/content/how-bg.webp" alt="Фон блока как это работает")  
+        .container 
+            .how__wrapper 
+                h2.how__title Как это работает?
+                .how__slider.swiper(data-slider="customer")
+                    .swiper-wrapper 
+                        .swiper-slide 
+                           p.how__text Свяжитесь с нами любым удобным для вас способом. 
+                        .swiper-slide 
+                           p.how__text Если у вас есть идея, мы готовы помочь её реализовать. Если же идеи пока нет, мы готовы вместе подумать над этим вопросом.
+                        .swiper-slide 
+                           p.how__text Начнём творить великое!
+                .how__buttons
+                    .swiper-button-prev.how__prev
+                        +icon("icon-left", 11, 19)
+                    .swiper-button-next.how__next
+                        +icon("icon-right", 11, 19)
+                a(href="#form").how__link Написать нам
