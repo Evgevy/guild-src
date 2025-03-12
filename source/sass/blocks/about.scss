@@ -97,10 +97,6 @@
             object-fit: cover;
         }
 
-        // @include vp-1279 {
-        //     height: 300px;
-        // }
-
         @include vp-1023 {
             height: 350px;
         }

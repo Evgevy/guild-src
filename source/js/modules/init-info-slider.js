@@ -2,7 +2,7 @@ const slider = document.querySelector('[data-slider="customer"]');
 let swiper; 
 
 const initInfoSlider = () => {
-  if (window.innerWidth <= 1024) {
+  if (window.innerWidth <= 1022) {
     if (!slider) {
       return;
     }

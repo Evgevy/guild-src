@@ -13,7 +13,7 @@ const initAboutSlider = () => {
         slidesPerGroup: 1, 
         spaceBetween: 30,
         autoplay: {
-          delay: 4000,
+          delay: 3000,
         },
         speed: 600,
         breakpoints: {
