@@ -7,6 +7,7 @@ import { initPhoneMask } from './modules/init-phone-mask';
 import { initPhoneValidation } from './modules/init-phone-validation';
 import { initInfoSlider } from './modules/init-info-slider';
 import { initCheck } from './modules/init-check';
+import { initAboutSlider } from './modules/init-about-slider';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -20,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initPhoneMask();
     initPhoneValidation();
     initInfoSlider();
+    initAboutSlider();
   });
 });
 
