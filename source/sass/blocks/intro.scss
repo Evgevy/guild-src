@@ -31,8 +31,8 @@
         gap: 20px;
         @include vp-1023 {
             flex-direction: column;
-            gap: 50px;
-            padding: 45px 0;
+            gap: 0px;
+            padding: 45px 0 0;
         }
     }
     
@@ -41,7 +41,7 @@
         width: 600px; 
         height: auto; 
         overflow: hidden;
-        margin: 0;
+        margin: -30px 0 0;
 
         @include vp-1023 {
             margin: 0 auto;
@@ -58,6 +58,15 @@
         justify-content: center; 
         align-items: center; 
         transform-origin: 0%;
+        padding: 30px 0;
+        
+        @include vp-1023 {
+            padding: 50px 0;
+        }
+
+        .swiper-slide-shadow-cube {
+            display: none;
+        }
     }
     
     .swiper-slide img {
@@ -95,93 +104,5 @@
             border-radius: 50px;
         }
     }
-
-    // &__images {
-    //     position: relative;
-    //     min-height: 570px;
-
-    //     @include vp-1279 {
-    //         min-height: 450px;
-    //     }
-
-    //     @include vp-1023 {
-    //         min-height: auto;
-    //         display: flex;
-    //         flex-direction: column;
-    //         gap: 40px;
-    //     }
-    // }
-
-    // &__image {
-    //     position: absolute;
-
-    //     img {
-    //         width: 100%;
-    //         height: 100%;
-    //         object-fit: cover;
-    //     }
-
-    //     @include vp-1023 {
-    //         position: static;
-    //     }
-    // }
-
-    // &__image:first-child {
-    //     width: 350px;
-    //     height: 350px;
-    //     top: 0;
-    //     right: 350px;
-
-    //     @include vp-1279 {
-    //         width: 280px;
-    //         height: 280px;
-    //         top: 0;
-    //         right: 230px;
-    //     }
-
-    //     @include vp-1023 {
-    //         width: 100%;
-    //         height: 100%;
-    //     }
-
-    // }
-
-    // &__image:nth-child(2) {
-    //     width: 280px;
-    //     height: 280px;
-    //     top: -60px;
-    //     right: 30px;
-
-    //     @include vp-1279 {
-    //         width: 230px;
-    //         height: 230px;
-    //         top: -60px;
-    //         right: -20px;
-    //     }
-
-    //     @include vp-1023 {
-    //         width: 100%;
-    //         height: 100%;
-    //     }
-    // }
-    
-    // &__image:nth-child(3) {
-    //     width: 310px;
-    //     height: 310px;
-    //     top: 250px;
-    //     right: 120px;
-
-    //     @include vp-1279 {
-    //         width: 250px;
-    //         height: 250px;
-    //         top: 200px;
-    //         right: 50px;
-    //     }
-
-    //     @include vp-1023 {
-    //         width: 100%;
-    //         height: 100%;
-    //     }
-    // }
     
 }
