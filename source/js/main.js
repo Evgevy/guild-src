@@ -9,11 +9,15 @@ import { initInfoSlider } from './modules/init-info-slider';
 import { initCheck } from './modules/init-check';
 import { initAboutSlider } from './modules/init-about-slider';
 import { initCube } from './modules/init-cube';
+import { initBottom } from './modules/init-bottom';
+import { initLemur } from './modules/init-lemur';
 
 
 window.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initCheck();
+  initBottom();
+  initLemur();
   window.addEventListener('load', () => {
     initHeaderAccordion();
     initModals();
@@ -24,6 +28,7 @@ window.addEventListener('DOMContentLoaded', () => {
     initInfoSlider();
     initAboutSlider();
     initCube();
+    
   });
 });
 
