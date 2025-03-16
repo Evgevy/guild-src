@@ -2,11 +2,11 @@
     &__title {
       margin: 0;
       margin-bottom: 10px;
-  
+      font-family: 'Raleway';
       font-weight: 700;
       font-size: 24px;
       line-height: 140%;
-  
+      color: #365C4E;
       @include vp-767 {
         font-weight: 700;
         font-size: 20px;
@@ -16,7 +16,7 @@
   
     &__message {
       margin: 0;
-  
+      font-family: 'Raleway';
       font-weight: 400;
       font-size: 16px;
       line-height: 137%;
