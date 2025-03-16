@@ -113,7 +113,7 @@
         }
     }
 
-    &__input-content.text {
+    &__content {
         margin-bottom: 100px;
     }
 
@@ -237,6 +237,28 @@
             @media screen and (max-width: 500px) {
                 
             }
+        }
+    }
+
+    &__error {
+        display: none;
+        align-items: center;
+        gap: 10px;
+        margin-top: 30px;
+        svg {
+            flex-shrink: 0;
+        }
+        
+        span {
+            font-family: 'Raleway';
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 25px;
+            color: #E73030;
+        }
+
+        &.is-active {
+            display: flex;
         }
     }
 

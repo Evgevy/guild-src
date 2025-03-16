@@ -11,6 +11,8 @@ import { initAboutSlider } from './modules/init-about-slider';
 import { initCube } from './modules/init-cube';
 import { initBottom } from './modules/init-bottom';
 import { initLemur } from './modules/init-lemur';
+import { addError } from './modules/add-error';
+import { initForm } from './modules/init-form';
 
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -18,6 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initCheck();
   initBottom();
   initLemur();
+  
   window.addEventListener('load', () => {
     initHeaderAccordion();
     initModals();
@@ -28,7 +31,8 @@ window.addEventListener('DOMContentLoaded', () => {
     initInfoSlider();
     initAboutSlider();
     initCube();
-    
+    addError();
+    initForm();
   });
 });
 
